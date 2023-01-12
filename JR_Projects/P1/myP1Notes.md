@@ -12,6 +12,8 @@ https://freeicons.io/user-interface-icons-4/map-marker-icon-36744#
 同学作品参考
 https://zhoutian0716.github.io/cafe-project-one/#
 
+github pages
+https://docs.github.com/en/pages/quickstart
 ---
 进度与代办:
 + p2的slide-in animation
