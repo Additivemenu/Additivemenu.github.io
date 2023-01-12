@@ -7,6 +7,8 @@ http://coffeeking.like-themes.com/
 找icon
 https://fontawesome.com/icons/twitter?s=&f=brands
 
+https://freeicons.io/user-interface-icons-4/map-marker-icon-36744#
+
 同学作品参考
 https://zhoutian0716.github.io/cafe-project-one/#
 
@@ -15,8 +17,8 @@ https://zhoutian0716.github.io/cafe-project-one/#
 + 所有page的左右页边距
 + page1 背景自动切换 https://www.youtube.com/watch?v=IwEqvjsDVU0
 + 在li前面加上icon
+  + 使用pseudo element: content属性
 + p2的滑动动画
-+ p3的滑动卡片效果
 + 添加字体, 颜色...
 
 

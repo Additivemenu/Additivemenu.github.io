@@ -82,19 +82,21 @@ a {
   display: flex;
   justify-content: flex-start;
 }
-.page1 .content_container .content .button_container button {
+.page1 .content_container .content .button_container a {
   color: white;
   border: 0;
   padding: 15px;
+  text-align: center;
+  width: 125px;
 }
-.page1 .content_container .content .button_container button:nth-child(1) {
+.page1 .content_container .content .button_container a.product {
   background-color: #FF7F2B;
 }
-.page1 .content_container .content .button_container button:nth-child(2) {
+.page1 .content_container .content .button_container a.shop {
   margin-left: 30px;
   background-color: #D2D0C9;
 }
-.page1 .content_container .content .button_container button:hover {
+.page1 .content_container .content .button_container a:hover {
   cursor: pointer;
 }
 
@@ -271,15 +273,28 @@ a {
 }
 .footer .explore .wrapper .exploreList ul {
   list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
 }
-.footer .explore .wrapper .exploreList ul li::before {
+.footer .explore .wrapper .exploreList ul li {
+  width: 200px;
+  position: relative;
+  margin: 10px 0;
+  padding-left: 50px;
+}
+.footer .explore .wrapper .exploreList ul li::before() {
   content: "";
-  width: 20px;
-  height: 2px;
-  background-color: aqua;
   position: absolute;
-  left: -25px;
-  bottom: 28px;
+  top: 1.3em;
+  left: 0.6em;
+  border-color: red;
+  border-style: solid;
+  border-width: 0 0.3em 0.25em 0;
+  height: 0.5em;
+  width: 0.5em;
+  margin-top: -1em;
+  transform: rotate(45deg);
 }
 .footer .contactUs {
   background-color: aqua;
@@ -298,14 +313,13 @@ a {
 }
 .footer .contactUs .wrapper .contactList ul li {
   margin: 10px 0;
+  display: flex;
+  align-items: center;
 }
-.footer .contactUs .wrapper .contactList ul li::before {
-  content: url("./Img/map.png");
-  left: 5px;
-  width: 5px;
-  height: 5px;
-  object-fit: fill;
-  filter: invert(1); /*invert the color of menu icon*/
+.footer .contactUs .wrapper .contactList ul li img {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -123,16 +123,18 @@ a{
                 justify-content: flex-start;
 
                 
-                button{
+                a{
                     color: white;
                     border: 0;
                     padding: 15px;
+                    text-align: center;
+                    width: 125px;
 
-                    &:nth-child(1){                  
+                    &.product{                  
                         background-color: $addressing-color;
-    
+                        
                     }
-                    &:nth-child(2){
+                    &.shop{
                         margin-left: 30px;
                         background-color: $background-color;
                     }
@@ -388,21 +390,38 @@ a{
             // TODO: how to place li like in 2 colums 3 rows?
             .exploreList ul{
                 list-style: none;
-                // display: flex;
-                // justify-content: space-between;
-                // align-items: flex-start;
+                padding-left:0;
 
-                // TODO: how to add ::before icon?
-                li::before{
-                    content: '';
-                    width: 20px;
-                    height: 2px;
-                    background-color: aqua;
+                //display: flex;
+                display:flex;
+                justify-content: space-around;
+                
+                li{
+                    width: 200px;
+                    position: relative;
+                    margin: 10px 0;
+                    padding-left: 50px;
 
-                    position: absolute; 
-                    left: -25px;
-                    bottom: 28px;
+                    // TODO: does pseudo element occupies content? or box?
+                    &::before(){
+                        content: "";
+                        position: absolute;
+                        top: 1.3em;
+                        left: 0.6em;
+
+                        border-color: red;
+                        border-style: solid;
+                        border-width: 0 0.3em 0.25em 0;
+
+                        height: 0.5em;
+                        width: 0.5em;
+                        margin-top: -1em;
+
+                        transform: rotate(45deg);
+                    }
                 }
+
+
             }
         }
     }
@@ -425,24 +444,39 @@ a{
                 // how to fit in icon image??
                 li{
                     margin: 10px 0;
-                    // li 前的icon
-                    &::before{
-                        content: url("./Img/map.png");
+
+                    display: flex;
+                    align-items: center;
+
+                    img{
+                        width: 16px;
+                        height: 16px;
+
+                        margin-right: 10px;
+
                         
-                        left: 5px;
+                    }
 
-                        width: 5px;
-                        height: 5px;
+                    // li 前的icon --------
+                    // &::before{
+                    //     content: url("./Img/map1.svg");
+                        
+                    //     left: 5px;
 
-                        object-fit: fill;
-                        filter: invert(1); /*invert the color of menu icon*/
+                    //     width: 5px;
+                    //     height: 5px;
+
+                    //     object-fit: fill;
+                        // filter: invert(1); /*invert the color of menu icon*/
+
+
                         // background: url("./Img/map.png");
                         // background-repeat: no-repeat;
                         // background-size: cover;
                         // background-position: center; /*make it in the center*/
                         // cursor: pointer;
 
-                    }
+                    // }
                 }
             }
         }
