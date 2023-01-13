@@ -189,10 +189,22 @@ a {
 .page3 {
   height: 900px;
   background-color: greenyellow;
+  background-image: url(./Img/Melb/tram.png), url(./Img/Melb/tower.png), url(./Img/Melb/sky_wheel.png);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: left bottom, left top, right bottom;
+  background-size: 50px, 50px, 50px;
 }
-.page3 .product_title .title {
-  margin: 20px;
+.page3 .product_title .header, .page3 .product_title .subHeader {
   text-align: center;
+}
+.page3 .product_title .header::first-letter, .page3 .product_title .subHeader::first-letter {
+  text-transform: capitalize;
+}
+.page3 .product_title .header {
+  font-size: 60px;
+}
+.page3 .product_title .subHeader {
+  font-size: 24px;
 }
 .page3 .product_menu {
   position: relative;

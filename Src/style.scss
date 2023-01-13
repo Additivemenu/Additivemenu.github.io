@@ -277,14 +277,28 @@ a{
 
     background-color: greenyellow;
 
+    background-image: url(./Img/Melb/tram.png), url(./Img/Melb/tower.png), url(./Img/Melb/sky_wheel.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left bottom, left top, right bottom;
+    background-size: 50px, 50px, 50px;
+
 
     .product_title{
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        .title{
-            margin: 20px;
+        
+        .header, .subHeader{
             text-align: center;
+            &::first-letter{
+                text-transform: capitalize;
+            }
+        }
+
+        .header{
+            font-size: 60px;
+        }
+
+        .subHeader{
+            font-size: 24px;
+            
         }
     }
 
