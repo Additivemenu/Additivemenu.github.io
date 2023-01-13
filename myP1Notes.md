@@ -19,11 +19,11 @@ https://docs.github.com/en/pages/quickstart
 + p2的slide-in animation
 + 点击链接滑动到某处, 现在的太硬了 [stackoverflow](https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link) 
   + https://www.youtube.com/watch?v=k4EGA95ZK4o 
-+ :star:添加字体, 颜色...
++ :star:添加字体, 颜色... kanit
 + 关于墨尔本元素的剪影:
   + 页面交接的地方, 用墨尔本元素的剪影做边框过度
   + 或者作为填充的背景
-
++ :star: responsive
 
 ---
 总体框架:
