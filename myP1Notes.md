@@ -21,6 +21,7 @@ https://docs.github.com/en/pages/quickstart
   + 页面交接的地方, 用墨尔本元素的剪影做边框过度
   + 或者作为填充的背景
 + :star: responsive
++ 背景颜色, 总体颜色的协调
 
 ---
 总体框架:

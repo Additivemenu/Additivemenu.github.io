@@ -174,6 +174,8 @@ a{
 }
 
 // --------------------------------------------------------------
+
+
 .page2{
     height: 700px;
     //padding: $page-topBottom-padding $page-leftRight-padding;
@@ -195,6 +197,25 @@ a{
             
             font-size: 24px;
 
+            *{
+                animation-duration: 2s;
+                animation-name: slideIn;
+                animation-timing-function: ease-out;
+            }
+
+            @keyframes slideIn {
+                from {
+                  margin-top: 300%;
+                  //width: 300%;
+                }
+              
+                to {
+                  margin-top: 0%;
+                  //width: 100%;
+                }
+            }
+            
+    
             .subHeader{
                 margin: 0 0 -5px;
             }
@@ -233,6 +254,22 @@ a{
 
             color: whitesmoke;
 
+            animation-duration: 3s;
+            animation-name: showUp;
+            animation-timing-function: ease-in-out;
+
+            @keyframes showUp {
+                from {
+                  opacity: 0;
+                  //width: 300%;
+                }
+              
+                to {
+                  opacity: 1;
+                  //width: 100%;
+                }
+            }
+
             .header{
                 font-size: 30px;
                 margin-bottom: 40px;
@@ -260,11 +297,26 @@ a{
     .rightImg{
         background-color: skyblue;
         width: $page2-subComp-width;
+
         .wrapper{
             width: 100%;
             padding: 100px 15px 100px;
             img{
-                width: 100%;;
+                width: 100%;
+
+                animation-duration: 2s;
+                animation-name:imgSlideIn;
+                animation-timing-function: ease-in-out;
+            }
+
+            @keyframes imgSlideIn {
+                from{
+                    margin-left: 300%;
+                }
+
+                to{
+                    margin-left:0%;
+                }
             }
         }
     }
@@ -277,11 +329,29 @@ a{
 
     background-color: greenyellow;
 
-    background-image: url(./Img/Melb/tram.png), url(./Img/Melb/tower.png), url(./Img/Melb/sky_wheel.png);
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: left bottom, left top, right bottom;
-    background-size: 50px, 50px, 50px;
+    .wrapper{
+        width: 100%;
+        height: 100%;
 
+        position: relative;
+        // invert background-image color
+        // https://stackoverflow.com/questions/23428133/how-to-invert-colors-in-background-image-of-a-html-element
+        &::before{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left:0;
+
+            content:"";
+            background-image: url(./Img/Melb/tram.png), url(./Img/Melb/tower.png), url(./Img/Melb/sky_wheel.png), url(./Img/Melb/vic_lib.png), url(./Img/Melb/beach_houses.png);
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+            background-position: left bottom, left top, right bottom, right top, bottom center;
+            background-size: 200px, 200px, 200px, 200px, 200px;
+            filter: invert(100%);
+        }
+
+        
+    }
 
     .product_title{
         
@@ -566,26 +636,6 @@ a{
                         
                     }
 
-                    // li 前的icon --------
-                    // &::before{
-                    //     content: url("./Img/map1.svg");
-                        
-                    //     left: 5px;
-
-                    //     width: 5px;
-                    //     height: 5px;
-
-                    //     object-fit: fill;
-                        // filter: invert(1); /*invert the color of menu icon*/
-
-
-                        // background: url("./Img/map.png");
-                        // background-repeat: no-repeat;
-                        // background-size: cover;
-                        // background-position: center; /*make it in the center*/
-                        // cursor: pointer;
-
-                    // }
                 }
             }
         }
