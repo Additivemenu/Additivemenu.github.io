@@ -204,14 +204,14 @@ a{
         height: 100%;
 
         content:"";
-        background-image: url(./Img/worldMap.jpg);
+        background-image: url(./Img/coconut.jpg);
         background-size: cover;
         
         background-repeat: no-repeat;
 
         // filter: blur(1.5px);
-        filter: grayscale(100%);
-        //ilter: invert(15%);
+        //filter: grayscale(100%);
+        filter: invert(40%);
 
         z-index: -1;
 
@@ -234,6 +234,8 @@ a{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+
+        justify-content: space-between;
 
         // page2: left 
         .leftContent{
@@ -281,7 +283,7 @@ a{
                 p{
                     line-height: 36px;
 
-                    color: #808080;
+                    color: whitesmoke;
                 }
     
                 button{
