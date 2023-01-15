@@ -36,6 +36,9 @@ https://docs.github.com/en/pages/quickstart
 + animation
 + scroll-behaviour: smooth
 + sliding-card: element methods
++ distributed scss:  
+  + add dependency into one single main scss file
+  + then run `sass --watch Src/SCSS/style.scss:style.css` in terminal
 
 ---
 

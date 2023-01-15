@@ -1,0 +1,255 @@
+@import "globalVar";
+
+
+.page3{
+    height: 900px;
+    //padding: $page-topBottom-padding $page-leftRight-padding;
+    padding-top: 0;
+
+    position: relative;
+    &::before{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left:0;
+
+        content: "";
+        background-image: url(./Img/wood-texture.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: grayscale(70%);
+    }
+
+    .wrapper{
+        padding-top:30px;
+
+        width: 100%;
+        height: 100%;    
+
+        position: relative;
+        // invert background-image color
+        // https://stackoverflow.com/questions/23428133/how-to-invert-colors-in-background-image-of-a-html-element
+        &::before{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left:0;
+
+            content:"";
+            background-image: url(./Img/Melb/tram.png), url(./Img/Melb/tower.png), url(./Img/Melb/sky_wheel.png), url(./Img/Melb/vic_lib.png), url(./Img/Melb/beach_houses.png);
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+            background-position: left bottom, left top, right bottom, right top, bottom center;
+            background-size: 200px, 200px, 200px, 200px, 200px;
+            filter: invert(100%);
+        }
+
+
+        .product_title{
+        
+            .header, .subHeader{
+                text-align: center;
+                &::first-letter{
+                    text-transform: capitalize;
+                }
+            }
+    
+            .header{
+                font-size: 60px;
+                color: whitesmoke;
+            }
+    
+            .subHeader{
+                font-size: 24px;
+                color: $wooden;
+                
+            }
+        }
+    
+        .product_menu{
+            position: relative;
+    
+            display: flex;
+            flex-direction: column;
+            
+            padding: 50px 80px 0;
+    
+            .categoryList_container{
+                width: 100%;
+                height: 100px;
+    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                .categoryItem{
+                    margin: 20px;
+                }
+            }
+    
+            .pre-btn, .nxt-btn{
+                border:none;
+    
+                width: 3vw;
+                height: 10%;
+    
+                position: absolute;
+                top:45%;
+    
+                // 0deg = to top, increasing degree means rotate clockwise from it
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    
+                z-index: 10;
+                // when hover on button, modify img
+                &:hover img{
+                    opacity: 1;
+                }
+    
+                img{
+                    cursor: pointer;
+                    opacity: 0.2;
+    
+                    transition: 1s;
+                }
+            }
+    
+            .pre-btn{
+                left: 2vw;
+                transform: rotate(180deg);
+            }
+    
+            .nxt-btn{
+                right:2vw;
+            }
+    
+            .productCardList_container{
+                display: flex;
+                justify-content: space-between;      // spreads cards evenly 
+                align-items: center;
+    
+                overflow: hidden;
+                scroll-behavior: smooth;  
+    
+                .productItemCard{
+                    position: relative;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    
+                    align-items: center;
+    
+                    width: 300px;
+                    height: 475px;
+                    padding: 25px;
+    
+                    background-color: whitesmoke;
+    
+                    margin-right:10px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+    
+                    // TODO: 如何讲img_container与button居中?
+                    // TODO: note <button> is inline-level element
+    
+                    .productItemImg_container{
+                        width: 250px;
+                        img{
+                            width: 100%
+                        }
+                        
+                    }
+                    .header{
+                        text-align: center;
+    
+                        font-size:24px;
+                        margin: 0 0 14px;
+                    }
+                    .productItemInfo{
+                        text-align: center;
+    
+                        font-size:14px;
+                        margin: 0 0 5px;
+                    }
+    
+                    .price{
+                        font-size:24px;
+                        margin:0 0 10px;
+                        font-weight: 700;
+                    }
+    
+                    button{
+                        border: 0;
+                        padding: 10px 20px;
+    
+                        background-color: $background-color;
+                        color: whitesmoke;
+    
+                        font-size: 14px;
+                        font-weight: 600;
+    
+                        &:hover{
+                            background-color: #FF7F2B;
+                            transition: 0.5s ease-in-out;
+                        }
+                    }
+    
+                }
+            }
+    
+        }
+    
+    }
+
+    
+}
+
+@media screen and (max-width: 900px){
+    .page3{
+        .wrapper{
+            &::before{
+                content:"";
+                background-size: 150px, 150px, 150px, 150px, 150px;
+            }
+
+            .product_title{
+                .header{
+                    font-size: 30px;
+                }
+        
+                .subHeader{
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 600px){
+
+    .page3{
+        .wrapper{
+            &::before{
+                content:"";
+
+                background-image: url(./Img/Melb/tram.png), url(./Img/Melb/vic_lib.png), url(./Img/Melb/sky_wheel.png);
+                background-position: left 85%, center bottom, right 85%;
+                background-size: 150px, 150px, 150px;
+            }
+
+            .product_title{
+                .header{
+                    font-size: 30px;
+                }
+        
+                .subHeader{
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+
+}

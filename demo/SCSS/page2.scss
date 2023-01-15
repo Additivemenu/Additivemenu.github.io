@@ -1,0 +1,8 @@
+@import "globalVar";
+
+.page2{
+    height: 500px;
+    background-color: red;
+
+    color: $page2-font-color;
+}
