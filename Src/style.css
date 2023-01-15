@@ -105,17 +105,22 @@ a {
   text-align: center;
   width: 125px;
   transition: 0.5s ease-in-out;
+  font-size: 16px;
+  font-weight: 500;
 }
 .page1 .content_container .content .button_container a.product {
-  background-color: #FF7F2B;
+  background-color: #E6BF83;
 }
 .page1 .content_container .content .button_container a.shop {
   margin-left: 30px;
-  background-color: #D2D0C9;
+  background-color: #4A4947;
 }
 .page1 .content_container .content .button_container a:hover {
   cursor: pointer;
   width: 150px;
+  border: solid black 1.5px;
+  color: black;
+  background-color: #fff;
 }
 
 .page2 {
@@ -289,7 +294,7 @@ a {
 }
 .page3 .wrapper .product_title .subHeader {
   font-size: 24px;
-  color: whitesmoke;
+  color: #E6BF83;
 }
 .page3 .wrapper .product_menu {
   position: relative;
