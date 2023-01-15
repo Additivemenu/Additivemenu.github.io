@@ -58,6 +58,8 @@ a{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    overflow: hidden;
     
     animation: change 20s infinite ease-in-out;
     @keyframes change {
@@ -151,7 +153,6 @@ a{
 
                 display: flex;
                 justify-content: flex-start;
-
                 
                 a{
                     color: white;
@@ -604,6 +605,9 @@ a{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+
+    overflow: hidden;
 
     background-color: wheat;
     // position: relative;
@@ -751,6 +755,90 @@ a{
                 }
             }
         }
+    }
+}
+
+//============================================================
+@media screen and (max-width: 900px){
+
+    .page1{
+        .nav_container a{
+            font-size: 18px;
+            
+        }
+
+        .content_container{
+            .content{
+                grid-column: 3 / span 4;
+                grid-row: 3 / span 5;
+
+                .header{
+                    font-size: 45px;;
+                }
+                p{
+                    font-size: 14px;
+                }
+                .button_container{
+                    .product, .shop{
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    .page3{
+        .wrapper{
+            &::before{
+                content:"";
+                background-size: 150px, 150px, 150px, 150px, 150px;
+            }
+
+            .product_title{
+                .header{
+                    font-size: 30px;
+                }
+        
+                .subHeader{
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .page3{
+        .wrapper{
+            &::before{
+                content:"";
+
+                background-image: url(./Img/Melb/tram.png), url(./Img/Melb/vic_lib.png), url(./Img/Melb/sky_wheel.png);
+                background-position: left 85%, center bottom, right 85%;
+                background-size: 150px, 150px, 150px;
+            }
+
+            .product_title{
+                .header{
+                    font-size: 30px;
+                }
+        
+                .subHeader{
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: row-reverse;
+        
     }
 }
 
