@@ -83,7 +83,7 @@ a{
         // background-color: orange;
         
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         .logo_container{
             img{
@@ -769,7 +769,7 @@ a{
 
         .content_container{
             .content{
-                grid-column: 3 / span 4;
+                grid-column: 3 / span 6;
                 grid-row: 3 / span 5;
 
                 .header{

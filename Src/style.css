@@ -49,7 +49,7 @@ a {
 .page1 .header_container {
   height: 105px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .page1 .header_container .logo_container img {
   height: 100%;
@@ -492,7 +492,7 @@ a {
     font-size: 18px;
   }
   .page1 .content_container .content {
-    grid-column: 3/span 4;
+    grid-column: 3/span 6;
     grid-row: 3/span 5;
   }
   .page1 .content_container .content .header {
