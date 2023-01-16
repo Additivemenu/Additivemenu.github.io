@@ -417,7 +417,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   overflow: hidden;
   background-color: wheat;
 }
@@ -429,7 +429,7 @@
   padding: 50px 15px 100px;
 }
 .footer .shopInfo .wrapper .logo_container img {
-  width: 350px;
+  width: 225px;
 }
 .footer .explore {
   width: 450px;
