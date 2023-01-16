@@ -55,7 +55,7 @@
     
             .header{
                 font-size: 60px;
-                color: whitesmoke;
+                color: $background-color;
             }
     
             .subHeader{
@@ -141,7 +141,7 @@
                     height: 475px;
                     padding: 25px;
     
-                    background-color: whitesmoke;
+                    background-color: $background-color;
     
                     margin-right:10px;
                     &:last-child{
@@ -181,14 +181,14 @@
                         border: 0;
                         padding: 10px 20px;
     
-                        background-color: $background-color;
-                        color: whitesmoke;
+                        background-color: $wooden;
+                        color: $background-color;
     
                         font-size: 14px;
                         font-weight: 600;
     
                         &:hover{
-                            background-color: #FF7F2B;
+                            background-color: $text-color;
                             transition: 0.5s ease-in-out;
                         }
                     }

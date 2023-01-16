@@ -1,28 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Kanit", sans-serif;
-}
-
-html, body {
-  width: 100vw;
-  height: 100vh;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-section {
-  padding: 30px 60px;
-}
-
-a {
-  text-decoration: none;
-}
-
 .page1 {
   height: 900px;
   background-image: url("./Img/p1background.png");
@@ -73,7 +49,7 @@ a {
   transition: 0.5s ease-in-out;
 }
 .page1 .header_container .nav_container ul li a {
-  color: whitesmoke;
+  color: white;
 }
 .page1 .header_container .nav_container ul li:hover {
   transform: translateY(-5px);
@@ -88,7 +64,7 @@ a {
   grid-column: 6/span 4;
   grid-row: 3/span 4;
   padding: 30px;
-  color: whitesmoke;
+  color: white;
   font-size: 16px;
 }
 .page1 .content_container .content .header {
@@ -114,16 +90,34 @@ a {
 }
 .page1 .content_container .content .button_container a.shop {
   margin-left: 30px;
-  background-color: #4A4947;
+  background-color: black;
 }
 .page1 .content_container .content .button_container a:hover {
   cursor: pointer;
   width: 150px;
   border: solid black 1.5px;
   color: black;
-  background-color: #fff;
+  background-color: white;
 }
 
+@media screen and (max-width: 900px) {
+  .page1 .nav_container a {
+    font-size: 18px;
+  }
+  .page1 .content_container .content {
+    grid-column: 3/span 6;
+    grid-row: 3/span 5;
+  }
+  .page1 .content_container .content .header {
+    font-size: 45px;
+  }
+  .page1 .content_container .content p {
+    font-size: 14px;
+  }
+  .page1 .content_container .content .button_container .product, .page1 .content_container .content .button_container .shop {
+    font-size: 14px;
+  }
+}
 .page2 {
   height: 700px;
   overflow: hidden;
@@ -177,11 +171,11 @@ a {
   font-size: 60px;
   line-height: 62px;
   margin: 0 0 10px;
-  color: #D2D0C9;
+  color: white;
 }
 .page2 .background-wrapper .leftContent .wrapper p {
   line-height: 36px;
-  color: whitesmoke;
+  color: white;
 }
 .page2 .background-wrapper .leftContent .wrapper button {
   padding: 10px;
@@ -197,7 +191,7 @@ a {
 .page2 .background-wrapper .openingHour .wrapper {
   width: 100%;
   padding: 100px 15px 100px;
-  color: whitesmoke;
+  color: white;
   animation-duration: 3s;
   animation-name: showUp;
   animation-timing-function: ease-in-out;
@@ -291,7 +285,7 @@ a {
 }
 .page3 .wrapper .product_title .header {
   font-size: 60px;
-  color: whitesmoke;
+  color: white;
 }
 .page3 .wrapper .product_title .subHeader {
   font-size: 24px;
@@ -352,7 +346,7 @@ a {
   width: 300px;
   height: 475px;
   padding: 25px;
-  background-color: whitesmoke;
+  background-color: white;
   margin-right: 10px;
 }
 .page3 .wrapper .product_menu .productCardList_container .productItemCard:last-child {
@@ -382,16 +376,42 @@ a {
 .page3 .wrapper .product_menu .productCardList_container .productItemCard button {
   border: 0;
   padding: 10px 20px;
-  background-color: #D2D0C9;
-  color: whitesmoke;
+  background-color: #E6BF83;
+  color: white;
   font-size: 14px;
   font-weight: 600;
 }
 .page3 .wrapper .product_menu .productCardList_container .productItemCard button:hover {
-  background-color: #FF7F2B;
+  background-color: black;
   transition: 0.5s ease-in-out;
 }
 
+@media screen and (max-width: 900px) {
+  .page3 .wrapper::before {
+    content: "";
+    background-size: 150px, 150px, 150px, 150px, 150px;
+  }
+  .page3 .wrapper .product_title .header {
+    font-size: 30px;
+  }
+  .page3 .wrapper .product_title .subHeader {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .page3 .wrapper::before {
+    content: "";
+    background-image: url(./Img/Melb/tram.png), url(./Img/Melb/vic_lib.png), url(./Img/Melb/sky_wheel.png);
+    background-position: left 85%, center bottom, right 85%;
+    background-size: 150px, 150px, 150px;
+  }
+  .page3 .wrapper .product_title .header {
+    font-size: 30px;
+  }
+  .page3 .wrapper .product_title .subHeader {
+    font-size: 16px;
+  }
+}
 .footer {
   height: 450px;
   display: flex;
@@ -479,7 +499,7 @@ a {
   display: flex;
   align-items: center;
   font-size: 18px;
-  color: whitesmoke;
+  color: white;
 }
 .footer .contactUs .wrapper .contactList ul li img {
   width: 16px;
@@ -487,51 +507,34 @@ a {
   margin-right: 10px;
 }
 
-@media screen and (max-width: 900px) {
-  .page1 .nav_container a {
-    font-size: 18px;
-  }
-  .page1 .content_container .content {
-    grid-column: 3/span 6;
-    grid-row: 3/span 5;
-  }
-  .page1 .content_container .content .header {
-    font-size: 45px;
-  }
-  .page1 .content_container .content p {
-    font-size: 14px;
-  }
-  .page1 .content_container .content .button_container .product, .page1 .content_container .content .button_container .shop {
-    font-size: 14px;
-  }
-  .page3 .wrapper::before {
-    content: "";
-    background-size: 150px, 150px, 150px, 150px, 150px;
-  }
-  .page3 .wrapper .product_title .header {
-    font-size: 30px;
-  }
-  .page3 .wrapper .product_title .subHeader {
-    font-size: 16px;
-  }
-}
 @media screen and (max-width: 600px) {
-  .page3 .wrapper::before {
-    content: "";
-    background-image: url(./Img/Melb/tram.png), url(./Img/Melb/vic_lib.png), url(./Img/Melb/sky_wheel.png);
-    background-position: left 85%, center bottom, right 85%;
-    background-size: 150px, 150px, 150px;
-  }
-  .page3 .wrapper .product_title .header {
-    font-size: 30px;
-  }
-  .page3 .wrapper .product_title .subHeader {
-    font-size: 16px;
-  }
   .footer {
     display: flex;
     flex-direction: row-reverse;
   }
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Kanit", sans-serif;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 30px 60px;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
