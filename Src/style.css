@@ -344,7 +344,7 @@
   flex-direction: column;
   align-items: center;
   width: 300px;
-  height: 475px;
+  height: 525px;
   padding: 25px;
   background-color: white;
   margin-right: 10px;
@@ -369,11 +369,15 @@
   margin: 0 0 5px;
 }
 .page3 .wrapper .product_menu .productCardList_container .productItemCard .price {
+  position: absolute;
+  bottom: 75px;
   font-size: 24px;
   margin: 0 0 10px;
   font-weight: 700;
 }
 .page3 .wrapper .product_menu .productCardList_container .productItemCard button {
+  position: absolute;
+  bottom: 30px;
   border: 0;
   padding: 10px 20px;
   background-color: #E6BF83;
